@@ -1,30 +1,49 @@
-# 🤖 Spark — Rule-Based AI Chatbot
+# 🧠 DecodeLabs AI Industrial Training Kit — Portfolio
 
-Project 1 of the **DecodeLabs AI Industrial Training Kit (Batch 2026)**
+> A hands-on journey through foundational AI engineering.
+> **Batch 2026** | DecodeLabs
 
-A foundational chatbot built entirely with control flow and decision-making logic — no machine learning, no LLMs. Just the deterministic, transparent "white box" architecture that underpins every reliable AI guardrail in production today.
+This repository documents my progression through the DecodeLabs AI internship, one project at a time. Each project lives in its own folder with a dedicated README explaining the architecture, results, and lessons learned.
 
-##  Features
+---
 
--  **Continuous input loop** — runs until a clean exit command
--  **Input sanitization** — handles case and whitespace gracefully
--  **Dictionary-based knowledge base** — O(1) lookups instead of if-elif chains
--  **Randomized responses** — multiple replies per intent for personality
--  **Fallback handler** — graceful response for unknown inputs
--  **Crash-safe** — clean exit on `bye` or `Ctrl+C`
+## 📂 Projects
 
-##  Architecture
+| # | Project | Concept | Key Skills |
+|---|---------|---------|------------|
+| 1 | [🤖 Spark — Rule-Based Chatbot](./project-1-chatbot/) | Deterministic AI logic | Control flow, dictionaries, input handling |
+| 2 | [🌸 Iris Flower Classifier](./project-2-classifier/) | Supervised learning | scikit-learn, KNN, train/test split, model evaluation |
 
-Follows the **IPO model** (Input → Process → Output):
+> _More projects coming as the internship progresses._
 
-1. **Input** — `input().lower().strip()` for normalized user messages
-2. **Process** — Dictionary lookup via `.get(key, fallback)`
-3. **Output** — `random.choice()` for varied replies
+---
 
-##  How to run
+## 🛠 Tech Stack
+
+- **Language:** Python 3
+- **Libraries:** `scikit-learn`, `pandas`, `numpy`
+- **Environment:** virtualenv (`venv/`)
+
+## ⚡ Quick start
 
 ```bash
-python3 chatbot.py
+# Clone this repo
+git clone https://github.com/Olacode01/DecodeLabs-Internship.git
+cd DecodeLabs-Internship
+
+# Set up the virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies for ML projects
+pip install scikit-learn pandas
+
+# Run any project
+cd project-1-chatbot && python3 chatbot.py
+# or
+cd project-2-classifier && python3 classifier.py
 ```
 
-##  Sample conversation
+---
+
+Built by **Toheeb** as part of the DecodeLabs AI Internship.
